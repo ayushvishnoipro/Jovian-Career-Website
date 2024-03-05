@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovian Careers</title>
+    <style>
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        /* Styling for the attractive "Jovian Careers" heading */
+        h1 {
+            font-size: 3em;
+            /* Larger font size for emphasis */
+            color: #3498db;
+            /* Blue color, you can choose your preferred color */
+            text-align: center;
+            /* Center the text */
+            text-transform: uppercase;
+            /* Convert text to uppercase for a bold look */
+            letter-spacing: 2px;
+            /* Add letter spacing for clarity */
+            margin-bottom: 20px;
+            /* Add some spacing at the bottom */
+            font-weight: bold;
+            /* Make the text bold */
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            /* Add a subtle text shadow */
+        }
+
+        /* Optional: Add a background color or border for further emphasis */
+        h1 {
+            background-color: #ecf0f1;
+            /* Light gray background color */
+            padding: 10px;
+            /* Add padding for a subtle border effect */
+            border-radius: 5px;
+            /* Round the corners */
+        }
+
+
+        /* Styling for the body */
+        body {
+            font-family: 'Your Preferred Font', sans-serif;
+            /* Replace with your preferred font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            /* Add some padding to the body */
+        }
+
+        /* Styling for the main container */
+        div {
+            max-width: 800px;
+            /* Set a maximum width for the container */
+            margin: 0 auto;
+            /* Center the container horizontally */
+        }
+
+        /* Styling for the h1 heading */
+        h1 {
+            font-size: 2.5em;
+            /* Adjust the font size as needed */
+            color: #333;
+            /* Set your preferred text color */
+        }
+
+        /* Styling for the banner image */
+        .banner {
+            width: 100%;
+            /* Take up the full width of the container */
+            height: 320px;
+            /* Set a fixed height of 320 pixels */
+            object-fit: cover;
+            /* Ensure the image covers the container, maintaining aspect ratio */
+            object-position: center;
+            /* Center the image within the container */
+            margin-bottom: 20px;
+            /* Add some spacing at the bottom */
+        }
+
+        /* Styling for paragraphs */
+        p {
+            font-size: 1.1em;
+            /* Adjust the font size as needed */
+            color: #555;
+            /* Set your preferred text color */
+            margin-bottom: 15px;
+            /* Add some spacing at the bottom */
+        }
+
+        /* Styling for h2 heading */
+        h2 {
+            font-size: 1.8em;
+            /* Adjust the font size as needed */
+            color: #333;
+            /* Set your preferred text color */
+            text-align: left;
+            /* Left-align the text */
+            margin-bottom: 15px;
+            /* Add some spacing at the bottom */
+        }
+
+        /* Styling for the button */
+        /* Styling for the button */
+        button {
+            display: block;
+            /* Make the button a block-level element */
+            margin: 0 auto;
+            /* Center the button horizontally */
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            font-size: 1em;
+            /* Adjust the font size as needed */
+            background-color: #4CAF50;
+            /* Set your preferred background color */
+            color: #fff;
+            /* Set your preferred text color */
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Optional: Add hover effect for the button */
+        button:hover {
+            background-color: #45a049;
+            /* Set your preferred hover background color */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Jovian Careers</h1>
+        <img src="http://127.0.0.1:5000/static/banner.jpg" alt="picture" height="320px" class="banner">
+        <h2>About Jovian</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil hic laboriosam quod enim molestiae inventore,
+            ullam unde autem maiores sequi eius eum ex, similique tempora ipsam ut culpa adipisci iure voluptatem
+            pariatur voluptatibus debitis quia provident? Nulla tempora consequatur quis ullam, earum culpa architecto,
+            accusamus obcaecati veniam quidem ratione voluptatibus? Numquam excepturi odio optio. Deserunt eius, ea odio
+            laborum modi minus totam distinctio dolorem. Ullam error aperiam, amet inventore fugiat repudiandae corporis
+            necessitatibus, incidunt omnis vel impedit? Labore odit enim autem ducimus placeat sunt sed dignissimos
+            esse, eos ea eaque magni soluta optio, ipsum hic, pariatur beatae consectetur ab. Blanditiis.</p>
+        <h2>Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+            <div>
+                <h4>{{job['title']}}</h4>
+                <div>Location:{{job['Location']}}</div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <p>todo show the gobs here</p>
+        <button>Contact Us</button>
+    </div>
+
+</body>
+
+</html>
